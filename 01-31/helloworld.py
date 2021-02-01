@@ -2,7 +2,7 @@
 print("Hello world")
 
 
-# 파이썬 확인 방법
+# cmd를 이용한 파이썬 확인 방법
     #1. ctrl+shift+c | win+r 눌러서 cmd 열기
     #2. 파이썬 파일 저장 경로로 이동
     #    ㄴ> cd C:\Users\ps961\OneDrive\문서\Python-Web-Scrapper\01-31
@@ -13,3 +13,5 @@ print("Hello world")
     #C:\Users\ps961\OneDrive\문서\Python-Web-Scrapper\01-31>python helloworld.py
     #Hello world
     
+#VSC 터미널로 바로 확인
+    #ㄴ> ctrl + F5
