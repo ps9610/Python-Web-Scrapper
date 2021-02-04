@@ -5,7 +5,7 @@ LIMIT = 50
 URL = f"https://www.indeed.com/jobs?q=python&limit={LIMIT}" 
 
 #indeed 페이지를 추출하는 함수
-def extract_indeed_pages():
+def get_last_page():
     result = requests.get(URL)
     soup = BeautifulSoup(result.text, "html.parser")
     pagination = soup.find("div", {"class" : "pagination"})
@@ -37,7 +37,7 @@ def extract_job(html):
 
 
 #indeed 페이지를 첫 페이지~마지막 페이지까지 각 페이지마다 낱개로 배열
-def extract_indeed_jobs(last_page):
+def extract_jobs(last_page):
     jobs = []
     for page in range(last_page):
         print(f"Scrapping page {page}")
@@ -50,3 +50,8 @@ def extract_indeed_jobs(last_page):
             jobs.append(job)
     return jobs 
     
+# 최대한 한 곳으로 모아서 정리하려고 함수만듬
+def get_jobs():
+    last_page = get_last_page() # page를 가져오는 함수
+    jobs = extract_jobs(last_page) # 함수 실행 시 마지막 페이지를 받아주는 매개변수를 쓴 변수
+    return jobs

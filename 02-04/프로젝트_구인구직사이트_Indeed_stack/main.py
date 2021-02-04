@@ -12,10 +12,14 @@
 #10. indeed.py에서 extract_indeed_pages 함수 import하기 + 함수를 변수로 묶어 실행
 #11. indeed 페이지의 마지막 페이지를 불러올 함수 만들기 + 
 
-from indeed import extract_indeed_pages, extract_indeed_jobs    
+from indeed import get_jobs as get_indeed_jobs
+from so import get_jobs as get_so_jobs
 
-last_indeed_page = extract_indeed_pages() # page를 가져오는 함수를 변수로 만들어줌
- 
-indeed_jobs = extract_indeed_jobs(last_indeed_page) # 함수 실행 시 마지막 페이지를 받아주는 매개변수를 쓴 변수
+#last_indeed_page = extract_indeed_pages() = last_page = get_last_page() # page를 가져오는 함수
 
-print(indeed_jobs)
+#indeed_jobs = extract_indeed_jobs(last_indeed_page) = jobs = extract_jobs(last_page) # 함수 실행 시 마지막 페이지를 받아주는 매개변수를 쓴 변수
+
+#indeed_jobs = get_indeed_jobs(), stack할 때만 잠깐 주석
+so_jobs = get_so_jobs()
+
+#print(so_jobs)
